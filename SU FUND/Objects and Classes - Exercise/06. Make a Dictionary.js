@@ -1,0 +1,3 @@
+function dictionary(input) {}
+
+dictionary();
