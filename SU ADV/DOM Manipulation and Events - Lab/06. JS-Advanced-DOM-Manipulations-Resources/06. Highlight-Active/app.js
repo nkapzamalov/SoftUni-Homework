@@ -1,3 +1,3 @@
-function addItem() {
+function focus() {
     console.log('TODO:...');
 }
