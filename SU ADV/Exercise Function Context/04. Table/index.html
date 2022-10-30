@@ -1,6 +1,3 @@
-<!--Problems for in-class lab for the “JavaScript Advanced” course @ SoftUni.
-Submit your solutions in the SoftUni judge system at https://judge.softuni.bg/Contests/1549/Lab-DOM-Manipulations -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,42 +6,42 @@ Submit your solutions in the SoftUni judge system at https://judge.softuni.bg/Co
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Delete from Table</title>
+    <script src="index.js"></script>
+    <title>Document</title>
 </head>
 
 <body>
-    <table border="1" id="customers">
+    <table class="minimalistBlack">
         <thead>
             <tr>
                 <th>Name</th>
-                <th>Email</th>
+                <th>Town</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>Eve</td>
-                <td>eve@gmail.com</td>
+                <td>Sofia</td>
             </tr>
             <tr>
                 <td>Nick</td>
-                <td>nick@yahooo.com</td>
+                <td>Varna</td>
             </tr>
             <tr>
                 <td>Didi</td>
-                <td>didi@didi.net</td>
+                <td>Ruse</td>
             </tr>
             <tr>
                 <td>Tedy</td>
-                <td>tedy@tedy.com</td>
+                <td>Varna</td>
             </tr>
         </tbody>
+    
     </table>
-    <label>
-        Email: <input type="text" name="email" />
-        <button onclick="deleteByEmail()">Delete</button>
-    </label>
-    <div id="result"></div>
-    <script src="./app.js"></script>
+
 </body>
+<script>
+    solve()
+</script>
 
 </html>
