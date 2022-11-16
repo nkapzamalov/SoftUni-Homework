@@ -1,21 +1,14 @@
-document.querySelector("form").addEventListener("submit", onRegisterSubmit);
+document.querySelector("form").addEventListener("submit", onLoginSubmit);
 
-async function onRegisterSubmit(event) {
+async function onLoginSubmit(event) {
   event.preventDefault();
 
   const formdData = new FormData(event.target);
 
   const email = formdData.get("email");
   const password = formdData.get("password");
-  const rePassword = formdData.get("rePass");
 
-  if (email === "" || password === "") {
-    return alert("All fields must be filled!");
-  } else if (password != rePassword) {
-    return alert("Passwords don`t match");
-  }
-
-  const response = await fetch("http://localhost:3030/users/register", {
+  const response = await fetch("http://localhost:3030/users/login", {
     method: "post",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email, password }),
@@ -27,9 +20,7 @@ async function onRegisterSubmit(event) {
   }
 
   let data = await response.json();
-
   let authToken = data.accessToken;
-
   sessionStorage.setItem("authToken", authToken);
 
   window.location.pathname =
